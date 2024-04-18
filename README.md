@@ -66,3 +66,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Project Members
   - Student ID : i6341610
+
+
+  ## UML MODELS
+
+  - I added a UML model of the generators, and a documentation .txt file. It is in the path of signal_project/uml_models
