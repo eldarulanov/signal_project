@@ -1,0 +1,18 @@
+Documentation for the Cardio_Generator, generator files in an UML Diagram
+
+
+- The purpose of the UML diagram is to demonstrate the various factors/parts in play for creating and generating patient health data. It does it in a way such that it's easy to see the various parts in play. In the diagram, it shows how each class in the system of the generators has its own function and purposes such as generating saturation and pressure levels of blood, cholestoral levels, ECG readings etc... Because of this, each part of the system can be individually changed without having to impact the rest of the parts resulting in flexibility and ease of use. 
+
+
+
+- Main overlying interface: The PatientDataGenerator.java file was the main interface that the other generator classes implemented. Also, due to it's method signature of public void generate(int, outpurstrategy) it meant that every class could customize it to it's own needs. 
+
+- Seperating the data generators: Having separate classes for different health metrics means the system is easier to handle. Each class can be updated or fixed without affecting others, which makes the system more reliable and easier to improve.
+
+- Randomizing the data: Keeping certain data private within each class protects the information and keeps the system secure. Using random changes to simulate real health data makes the fake data look more realistic.
+
+
+Assumptions and simplifications: 
+- Each heath class file and data is independent from each other, and doesn't directly impact each other. However, in reality it is not like that and often operates together.
+- Randomizing the data also simulates real life with varied data around some certain base values. 
+
