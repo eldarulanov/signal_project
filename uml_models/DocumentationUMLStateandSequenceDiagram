@@ -1,0 +1,31 @@
+State Diagram
+
+The State Diagram shows how alerts in the Alert Generation System change from start to finish. The diagram includes these main parts:
+
+- Generated: The alert starts here when the system notices that something is wrong with the patient's health data.
+
+- Sent: After the alert is made, it's quickly sent to the doctors' and nurses' screens.
+
+- Acknowledged: A doctor or nurse sees the alert and marks it as seen, which stops the same alert from popping up again.
+
+- Resolved: The alert ends here, either because the patient's condition gets better on its own, or a healthcare worker fixes the issue.
+
+The diagram connects these parts with lines that show what causes the alert to move from one part to the next, like when a nurse sees an alert.
+
+————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————-
+
+Sequence Diagram
+
+The Sequence Diagram explains step by step how the system handles an alert from when it first notices a problem until the alert is finished. The parts involved include:
+
+- Patient Monitoring Device: This starts the alert process by sending data that shows there might be a problem.
+
+- AlertGenerator: This part of the system checks the data, asks for any past data needed for comparison, and decides whether to create an alert.
+
+- DataStorage: Keeps past data and sends it to the AlertGenerator when asked.
+
+- Alert: The actual warning or message about the patient's condition.
+
+- Medical Staff's Device: The device where alerts show up and where doctors or nurses can say they’ve seen the alert and handle it.
+
+This diagram shows the important steps and interactions needed to manage an alert, showing clearly how each part of the system helps in responding to patient emergencies.
