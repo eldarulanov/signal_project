@@ -71,3 +71,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   ## UML MODELS
 
   - I added a UML model of the generators, and a documentation .txt file. It is in the path of signal_project/uml_models
+  - I added UML models for the state and sequence diagram. Documentation can be found in the folder of UML models as well. 
