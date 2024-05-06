@@ -1,0 +1,4 @@
+You will see that in my code coverage report with JaCoCo:
+- That there is 0% coverage in the cardio generators folder(s). This would mean that there weren't tests executed for that. This might be because the unit tests perhaps weren't working for those classes - or the tests did not use the classes in this section. 
+- This was also the same for the outputs. This might be because the unit tests weren't aimed at the outputs, but rather data. 
+- Finally, for my data managment package, there were more coverage because more of it was tested. This is due to the fact that most Junit tests were meant for this package and to test data handling — which utilized other packages like the generators etc...
