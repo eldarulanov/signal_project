@@ -17,11 +17,20 @@ public class WebSocketOutputStrategy implements OutputStrategy {
 
     @Override
     public void output(int patientId, long timestamp, String label, String data) {
-        String message = String.format("%d,%d,%s,%s", patientId, timestamp, label, data);
+        String message = formatMessage(patientId, timestamp, label, data);
         // Broadcast the message to all connected clients
         for (WebSocket conn : server.getConnections()) {
-            conn.send(message);
+            try {
+                conn.send(message);
+            } catch (Exception e) {
+                System.err.println("Error sending message: " + e.getMessage());
+            }
         }
+    }
+
+    private String formatMessage(int patientId, long timestamp, String label, String data) {
+        // Ensure message format correctness
+        return String.format("%d,%d,%s,%s", patientId, timestamp, label, data);
     }
 
     private static class SimpleWebSocketServer extends WebSocketServer {
@@ -47,7 +56,7 @@ public class WebSocketOutputStrategy implements OutputStrategy {
 
         @Override
         public void onError(WebSocket conn, Exception ex) {
-            ex.printStackTrace();
+            System.err.println("An error occurred: " + ex);
         }
 
         @Override
