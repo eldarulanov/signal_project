@@ -1,6 +1,5 @@
 package com.alerts;
 
-// Represents an alert
 public class Alert {
     private String patientId;
     private String condition;
@@ -22,5 +21,9 @@ public class Alert {
 
     public long getTimestamp() {
         return timestamp;
+    }
+
+    public void sendAlert() {
+        System.out.println("Alert triggered: " + condition + " for patient ID " + patientId);
     }
 }

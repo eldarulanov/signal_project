@@ -1,5 +1,3 @@
-
-// HeartRateStrategy.java
 package com.alerts.strategy;
 
 import com.data_management.PatientRecord;
@@ -7,7 +5,7 @@ import com.data_management.PatientRecord;
 public class HeartRateStrategy implements AlertStrategy {
     @Override
     public boolean checkAlert(PatientRecord record) {
-        // Example logic for heart rate alert
-        return record.getMeasurementValue() < 60.0 || record.getMeasurementValue() > 100.0; // Example thresholds
+        double value = record.getMeasurementValue();
+        return value < 60.0 || value > 100.0; // Example condition
     }
 }
